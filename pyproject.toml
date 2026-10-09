@@ -1,0 +1,22 @@
+[project]
+name = "deltakit-sdk-testing"
+version = "0.1.0"
+description = "Independent test suite for Riverlane Deltakit QEC SDK"
+requires-python = ">=3.11"
+dependencies = ["deltakit"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0", "pytest-cov>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --strict-markers"
+markers = [
+    "contract: API contract tests",
+    "negative: negative tests",
+    "integration: end-to-end pipeline tests",
+    "cloud: tests requiring a Deltakit token",
+]
+
+[tool.coverage.run]
+source = ["tests"]
