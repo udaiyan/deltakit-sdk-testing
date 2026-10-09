@@ -3,7 +3,11 @@ import os
 import pytest
 
 from deltakit.circuit.gates import PauliBasis
-from deltakit.explorer.codes import RepetitionCode, css_code_memory_circuit
+from deltakit.explorer.codes import (
+    RepetitionCode,
+    RotatedPlanarCode,
+    css_code_memory_circuit,
+)
 from deltakit.explorer.qpu import QPU, SI1000Noise
 
 
@@ -16,7 +20,7 @@ requires_cloud = pytest.mark.skipif(
 )
 
 
-# --- Code fixtures -------------------------------------------------------
+# --- Repetition code fixtures -------------------------------------------
 @pytest.fixture
 def rep_code_d3():
     """Distance-3 repetition code with Z-basis stabilisers."""
@@ -29,7 +33,20 @@ def rep_code_d5():
     return RepetitionCode(distance=5, stabiliser_type=PauliBasis.Z)
 
 
-# --- Circuit fixtures ----------------------------------------------------
+# --- Rotated planar code fixtures ---------------------------------------
+@pytest.fixture
+def rotated_planar_3x3():
+    """3x3 rotated planar code - the canonical surface code patch."""
+    return RotatedPlanarCode(width=3, height=3)
+
+
+@pytest.fixture
+def rotated_planar_5x5():
+    """5x5 rotated planar code - larger distance for scaling tests."""
+    return RotatedPlanarCode(width=5, height=5)
+
+
+# --- Circuit fixtures ---------------------------------------------------
 @pytest.fixture
 def rep_circuit_d3(rep_code_d3):
     """Distance-3, 3-round memory circuit."""
