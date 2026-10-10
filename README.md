@@ -1,3 +1,5 @@
+[![Deltakit SDK Tests](https://github.com/udaiyan/deltakit-sdk-testing/actions/workflows/test.yml/badge.svg)](https://github.com/udaiyan/deltakit-sdk-testing/actions/workflows/test.yml)
+
 # Deltakit SDK - Independent Test Suite
 
 A black-box test suite for Deltakit, Riverlane open-source quantum error
