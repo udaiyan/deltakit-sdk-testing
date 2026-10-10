@@ -39,7 +39,14 @@ See TESTING.md for the strategy document.
 
 During development, this suite has surfaced several behaviours in the
 shipped SDK worth raising with the Deltakit maintainers. These are
-documented in TESTING.md and where possible captured as xfail tests.
+documented in [TESTING.md](TESTING.md) and where possible captured as
+`xfail` tests.
+
+## Background
+
+For a plain-English explanation of quantum error correction, what the
+Deltakit pipeline does, and why this test suite exists, see
+[QEC_EXPLAINED.md](QEC_EXPLAINED.md).
 
 ## Structure
 
