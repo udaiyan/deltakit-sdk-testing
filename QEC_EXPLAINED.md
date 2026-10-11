@@ -754,9 +754,9 @@ That is what `TESTING.md` in the repo does.
 
 ---
 
-## Part 12: Why This Matters for the Interview
+## Part 12: Why This Matters?
 
-When Riverlane asks about the repo, here is the story:
+When Riverlane (or anyone) asks about the repo, here is the story:
 
 1. **The domain is understood.** QEC is understood: what it is, why it
    matters, and how it fits into Riverlane's mission.
@@ -773,7 +773,7 @@ When Riverlane asks about the repo, here is the story:
 6. **The method was documented.** The `investigations/` folder shows how
    the API was discovered before tests were written against it.
 
-The repo is not just code. It is evidence of how the author thinks.
+The repo is not just code. It is evidence of how I figure things out.
 
 ---
 
